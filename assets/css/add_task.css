@@ -1,0 +1,449 @@
+body {
+    margin: 0;
+    background-color: #F6F7F8;
+    font-family: 'Inter';
+}
+
+.d-none {
+    display: none !important;
+}
+
+.no-border-bottom {
+    margin-bottom: 0px !important;
+    border-bottom: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 61px;
+    margin-top: 82px;
+    margin-bottom: 41px;
+}
+
+.hidden-input {
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    opacity: 0;
+}
+
+.add-task-whole-page {
+    display: flex;
+}
+
+.left-side-without-h1 input {
+    width: 422px;
+    height: 51px;
+    padding: 13px 21px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+}
+
+.add-task-left-side {
+    display: flex;
+    flex-direction: column;
+    margin-left: 123px;
+}
+
+.left-side-without-h1 {
+    display: flex;
+    flex-direction: column;
+    padding-right: 59px;
+    border-right: 1px solid lightgray;
+}
+
+.little-headlines {
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.enter-title {
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 34px;
+    outline: none;
+}
+
+.enter-description {
+    margin-bottom: 34px;
+    height: 119px;
+    padding: 18px 21px;
+    font-size: 21px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    resize: none;
+    font-family: 'Inter';
+    outline: none;
+}
+
+.select-div {
+    width: 422px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 21px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-bottom: 34px;
+    cursor: pointer;
+}
+
+.select-div span {
+    font-size: 21px;
+}
+
+ul {
+    position: relative; 
+    z-index: 200;
+    list-style-type: none;
+    width: 464px;
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-top: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 0;
+    margin-bottom: 34px;
+    padding-left: 0;
+}
+
+.div-li-category {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.div-li-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.div-li-contact:hover, .div-li-category:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+li {
+    font-size: 21px;
+    margin: 10px 20px;
+}
+
+.li-point {
+    display: flex;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+}
+
+.input-checkbox {
+    height: 15px !important;
+    width: 15px !important;
+    margin-right: 20px;
+}
+
+.contact-initials {
+    display: flex;
+    align-items: center;
+    width: 465px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.contact-initials div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50px;
+    border-radius: 100%;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.add-task-right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 59px;
+    margin-top: 196px;
+}
+
+.right-side-first-half {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-date {
+    font-size: 21px;
+    outline: none;
+    margin-bottom: 34px;
+    width: 422px;
+    height: 51px;
+    padding: 13px 21px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+}
+
+input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
+
+.prio-div {
+    display: flex;
+    margin-bottom: 35px;
+}
+
+.prio-div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 10px;
+    background-color: white;
+    margin-right: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 136px;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+}
+
+.prio-div div:hover {
+    scale: 1.05;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.prio-div span {
+    font-size: 21px;
+    margin-right: 5px;
+}
+
+.bg-orange {
+    background-color: #FF3D00 !important;
+    color: white !important;
+}
+
+.bg-yellow {
+    background-color: #FFA800 !important;
+    color: white !important;
+}
+
+.bg-green {
+    background-color: #7AE229 !important;
+    color: white !important;
+}
+
+.bg-pink {
+    background-color: #FC71FF;
+}
+
+.bg-turquoise {
+    background-color: #1FD7C1;
+}
+
+.bg-blue {
+    background-color: #0038FF;
+}
+
+.bg-violet {
+    background-color: #AE9EE5;
+}
+
+.subtask-input-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 422px;
+    height: 51px;
+    padding: 13px 21px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 8px;
+}
+
+.subtask-input-div input {
+    font-size: 21px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    height: 100%;
+    width: 345px;
+    outline: none;
+}
+
+#plus-icon {
+    filter: invert(1);
+    width: 22px;
+    height: 22px;
+}
+
+#close-icon {
+    width: 30px;
+    height: 32px;
+    padding-right: 12px;
+    border-right: 1px solid lightgray;
+}
+
+#checkmark-icon {
+    filter: invert(1);
+    padding-left: 12px;
+    width: 22px;
+    height: 20px;
+}
+
+.subtask-img-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 24px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.added-subtasks {
+    width: 420px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.added-subtasks div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.subtask {
+    margin-left: 20px;
+    font-size: 16px;
+    max-width: 450px;
+    word-break: break-word;
+}
+
+.clear-create-div {
+    display: flex;
+    justify-content: flex-end;
+    width: 400px;
+}
+
+.clear-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 136px;
+    padding: 18px 10px;
+    font-size: 21px;
+    background-color: white;
+    border: 1px solid #2A3647;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.clear-div img {
+    width: 15px;
+    margin-left: 5px;
+    margin-top: 1px;
+}
+
+.clear-div:hover img {
+    filter: invert(74%) sepia(83%) saturate(3935%) hue-rotate(165deg) brightness(96%) contrast(84%);
+}
+
+.create-div {
+    display: flex;
+    align-items: center;
+    padding: 18px 10px;
+    font-size: 16px;
+    background-color: #2A3647;
+    color: white;
+    margin-left: 30px;
+    border: 1px solid #2A3647;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.clear-div:hover {
+    border: 1px solid #29ABE2 !important;
+    box-shadow: 2px 4px 4px 0px rgb(0 0 0 / 20%) !important;
+    background-color: white !important;
+    color: #29ABE2;
+}
+
+.create-div img {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+}
+
+.create-button {
+    height: 100%;
+    width: 100%;
+    font-size: 21px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.create-div:hover {
+    background-color: #29ABE2 !important;
+    border: 1px solid #29ABE2 !important;
+    border: none;
+    box-shadow: 2px 4px 4px 0px rgb(0 0 0 / 20%);
+}
+
+
+.task-added-to-board {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 326px;
+    height: 74px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: #2A3647;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+}
+
+.task-added-to-board span {
+    font-size: 21px;
+    color: white;
+}
+
+.task-added-to-board img {
+    width: 24px;
+    height: 26px;
+    margin-left: 20px;
+    filter: brightness(0) invert(1);
+}
+
+@keyframes fadeInAddedTask {
+    from {
+        bottom: -15%;
+    }
+
+    to {
+        bottom: 5%;
+    }
+}

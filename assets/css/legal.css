@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    background-color: #F6F7F8;
+    font-family: 'Inter';
+}
+
+.d-none {
+    display: none;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 61px;
+    margin-top: 82px;
+    margin-bottom: 41px;
+}
+
+.legal-notice-whole-page {
+    display: flex;
+    flex-direction: column;
+    word-break: break-word;
+    margin-left: 115px;
+    margin-right: 124px;
+}
+
+
+@media(max-width: 1200px) {
+    .privacy-h1 {
+        font-size: 45px;
+    }
+}
+
+
+@media(max-width: 990px) {
+    h1 {
+        font-size: 47px;
+        margin-top: 72px;
+        margin-bottom: 35px;
+    }
+
+    .privacy-h1 {
+        font-size: 41px;
+    }
+
+    .legal-notice-whole-page {
+        margin-left: 33px;
+        margin-right: 33px;
+    }
+}
+
+
+@media(max-width: 770px) {
+    .legal-notice-whole-page {
+        margin-bottom: 90px;
+    }
+}
+
+
+@media(max-width: 570px) {
+    .privacy-h1 {
+        hyphens: auto;
+    }
+}
+
+
+@media(max-width: 380px) {
+    h1 {
+        font-size: 39px;
+    }
+
+    .privacy-h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+}

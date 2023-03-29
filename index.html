@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+  <link rel="stylesheet" href="./assets/fonts/fonts.css">
+  <script src="./assets/js/mini_backend.js"></script>
+  <script src="script.js"></script>
+  <script src="./assets/js/signUp.js"></script>
+  <script src="./assets/js/login.js" defer></script>
+  <link rel="icon" type="image/icon" href="./assets/img/join-logo.svg" />
+
+</head>
+
+<body onload="animatedLogo(), init()">
+
+  <img class="logo" src="assets/img/join-logo.svg" id="logo"></img>
+  <div class="signup-btn">
+    <span>Not a join user?</span>
+    <button onclick="showSignup(); return false">sign up</button>
+  </div>
+
+  <div class="login-container">
+    <div class="login-box">
+      <span class="login-box-header">Log In</span>
+      <div class="line"></div>
+      <form onsubmit="logIn(); return false">
+        <div class="form-style">
+          <input required type="email" placeholder="Email" id="email">
+          <img src="assets/img/letter.svg" alt="">
+        </div>
+        <div class="form-style">
+          <input required type="password" name="" id="password" minlength="6" placeholder="Password">
+          <img src="assets/img/lock.svg" alt="" onclick="toggleVisibility()" id="passwordImg">
+        </div>
+        <div class="password-note">
+          <div class="remember-password">
+            <input type="checkbox" id="remember-me">
+            <span>Remember me</span>
+          </div>
+          <div class="forgot-password">
+            <a onclick="resetPasswordForm()">Forgot my password</a>
+          </div>
+        </div>
+        <div class="login-btns">
+          <button class="login-user">Log in</button>
+          <button onclick="loginAsGuest()" class="login-guest">Guest Log in</button>
+        </div>
+      </form>
+    </div>
+    <div id="msgBox"></div>
+  </div>
+  <div id="bgByResponse" class="bgByResponse d-none"></div>
+  <div class="login-response d-none" id="login-response">
+    <span id="login-response-text"></span>
+  </div>
+
+</body>
+
+</html>

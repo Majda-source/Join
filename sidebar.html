@@ -1,0 +1,115 @@
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Join
+    </title>
+
+    <link rel="stylesheet" href="./assets/css/sidebar.css">
+    <link rel="stylesheet" href="./assets/css/sideBar_responsiv.css">
+
+    <script src="./board_maj.js"></script>
+    <script src="./assets/js/add_task.js"></script>
+    <script src="./script.js"></script>
+</head>
+
+<style>
+
+</style>
+
+
+
+<body>
+
+    <header>
+        <img class="join-logo" src="./assets/img/join-logo-white.svg" alt="join-logo">
+        <span class="responsive-d-none-990px">
+            Kanban Project Management Tool
+        </span>
+        <div class="header-right">
+            <a id="link-to-help" href="help.html"><img src="./assets/img/help.svg"
+                    class="question-mark responsive-d-none-770px"></a>
+            <div id="profil-picture" class="pp-container" onclick="showLogOut()">
+                <img src="./assets/img/user.svg" class="profil-picture">
+            </div>
+
+        </div>
+    </header>
+
+    <div id="log-out" class="log-out d-none">
+        <a class="help-log-out" href="help.html">Help</a>
+        <a class="legal-notice-log-out" href="legal.html">Legal notice</a>
+        <!-- <a class="privacy-log-out" href="privacy.html">Privacy</a> -->
+        <a class="login-log-out" href="index.html">Log out</a>
+    </div>
+
+    <nav>
+        <div class="nav-logo-container">
+            <img class="responsive-d-none-770px" src="./assets/img/join-logo2.svg">
+        </div>
+
+        <a id="summary" href="summary.html" class="nav-properties">
+            <div class="nav-icons">
+                <img src="./assets/img/summary.svg">
+            </div>
+            <span class="nav-text">
+                Summary
+            </span>
+        </a>
+
+        <a id="sidebar-board" href="board.html" class="nav-properties">
+            <div class="nav-icons">
+                <img src="./assets/img/board.svg">
+            </div>
+            <span class="nav-text">
+                Board
+            </span>
+        </a>
+
+        <a id="add-task" href="add_task.html" class="nav-properties">
+            <div class="nav-icons">
+                <img src="./assets/img/add_task.svg">
+            </div>
+            <span class="nav-text">
+                Add Task
+            </span>
+            <a>
+
+                <a id="contacts" href="contacts.html" class="nav-properties">
+                    <div class="nav-icons">
+                        <img src="./assets/img/contacts.svg">
+                    </div>
+                    <span class="nav-text">
+                        Contacts
+                    </span>
+                </a>
+
+
+                <div class="nav-notice responsive-d-none-770px">
+                    <a id="legal-notice" href="legal.html" class="legal-notice">
+                        <div class="nav-icons">
+                            <img src="./assets/img/info.svg">
+                        </div>
+                        <span class="nav-text">
+                            Legal notice
+                        </span>
+                    </a>
+
+                    <!-- <a id="privacy" href="privacy.html" class="legal-notice">
+                        <div class="nav-icons">
+                            <img class="filter-invert" src="../img/privacy-icon.svg">
+                        </div>
+                        <span class="nav-text">
+                            Privacy
+                        </span>
+                    </a> -->
+                </div>
+    </nav>
+
+</body>
+
+</html>

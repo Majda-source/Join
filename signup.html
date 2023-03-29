@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+  <script src="assets/js/mini_backend.js"></script>
+  <script src="assets/js/signUp.js"></script>
+  <script src="assets/js/login.js" defer></script>
+
+</head>
+
+<body onload="init()">
+
+  <img class="logo_signUp" src="assets/img/join-logo.svg"></img>
+  
+
+  <div class="login-container">
+    <div class="login-box signUp-box">
+      <span class="login-box-header">Sign up</span>
+      <div class="line"></div>
+      <img onclick="backToLogin()" class="arrowSignup" src="assets/img/arrow-left.svg" alt="">
+
+      <form onsubmit="signUp(); return false">
+        <div class="form-style">
+            <input required type="text" placeholder="Benutzername" id="name">
+            <img src="assets/img/user.svg" alt="">
+        </div>
+        <div class="form-style">
+          <input required type="email" placeholder="Email" id="email">
+          <img src="assets/img/letter.svg" alt="">
+        </div>
+        <div class="form-style">
+          <input required type="password" name="" id="password" minlength="6" placeholder="Password">
+          <img src="assets/img/lock.svg" alt="" id="passwordImg" onclick="toggleVisibility()">
+        </div>
+
+        <div class="login-btns">
+          <button class="signup-user">Sign up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  </div>
+
+</body>
+
+</html>

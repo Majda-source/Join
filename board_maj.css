@@ -1,0 +1,794 @@
+:root {
+    --width-task-size: 250px;
+    /* use for sizing tasks */
+}
+
+
+/* Headline-section */
+
+.headline-section {
+    width: 100%;
+    height: 30%;
+}
+
+
+.first-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 23px;
+    margin-bottom: 20pxf;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+.form-fields {
+    display: flex;
+}
+
+
+.find-task-div {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px grey;
+    background-color: white;
+    height: 34px;
+}
+
+
+.find-task-div img {
+    object-fit: cover;
+    filter: invert(0.2);
+    padding-left: 8px;
+    border-left: 1px solid white;
+}
+
+
+.find-task-input {
+    height: 40px;
+    border: none;
+
+}
+
+
+.find-task-button {
+    height: 42px;
+    border-radius: 10px;
+    background-color: #253141;
+    color: white;
+    font-weight: bold;
+    width: 120px;
+    margin-left: 25px;
+}
+
+
+.find-task-button:hover {
+    background-color: #2a3a50;
+    cursor: pointer;
+}
+
+
+.second-row {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    gap: 17px;
+}
+
+
+.unterordner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.kanban-management-headlines {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    flex-direction: column;
+}
+
+
+.unterordner img {
+    height: 27px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+.switch-add-icon {
+    object-fit: cover;
+}
+
+
+.switch-add-icon:hover {
+    object-fit: cover;
+    height: 17px;
+    width: auto;
+    border: solid 2px #29ABE2;
+    border-radius: 8px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+/* Kanban Overview Section */
+
+.kanban-overview {
+    display: flex;
+    font-family: 'Inter';
+    font-style: normal;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    gap: 17px;
+    flex-direction: row;
+}
+
+.current-status {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.current-status:hover {
+    cursor: pointer;
+}
+
+.drag-area-highlight {
+    background-color: #2a3a50;
+}
+
+.kanban-task-container {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.task-type {
+    padding: 2px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: orange;
+    border-radius: 8px;
+    color: white;
+    font-size: 17px;
+}
+
+.kanban-task-title {
+    font-size: 16px;
+}
+
+.task-description {
+    color: gray;
+    font-size: 14px;
+}
+
+.progress-border {
+    width: 93%;
+    height: 6px;
+    background: lightgray;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.progress-section {
+    display: flex;
+    align-items: center;
+}
+
+.progressbar-comparison {
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    flex: none;
+
+}
+
+.assigned-employees {
+    display: flex;
+}
+
+.assigned-employees img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 550px;
+    margin-top: 10px;
+}
+
+.second-picture {
+    position: relative;
+    right: 10px;
+}
+
+.third-picture {
+    position: relative;
+    right: 20px;
+}
+
+.profile-picture-shifting {
+    position: relative;
+    right: 10px;
+}
+
+
+/* Colors */
+
+.orange {
+    background-color: rgba(255, 122, 0, 1) !important;
+}
+
+.pink {
+    background-color: rgba(252, 113, 255, 1) !important;
+}
+
+.cyan {
+    background-color: rgba(31, 215, 193, 1) !important;
+}
+
+.blue {
+    background-color: rgba(0, 56, 255, 1) !important;
+}
+
+.yellow {
+    background-color: rgba(255, 199, 1, 1) !important;
+}
+
+/* clicked-task window
+**
+** c-t === clicked-task-window
+**
+*/
+
+
+.clicked-task-bg {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.clicked-addtask-window ::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+}
+
+
+.clicked-task-window {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-32%, -50%);
+    padding: 60px;
+    width: 433px;
+    height: 600px;
+    border-radius: 20px;
+    background-color: white;
+    z-index: 300;
+    display: none;
+    flex-direction: column;
+    overflow: auto;
+}
+
+
+/* Edit window */
+.clicked-task-window h4 {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 120%;
+    color: #000000;
+    font-family: 'Inter';
+    font-style: normal;
+    margin-bottom: 6px;
+    margin-top: 19px;
+}
+
+.clicked-task-window input {
+    padding: 11px 21px;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+}
+
+
+
+.clicked-task-window textarea {
+    width: 100%;
+    padding: 18px 21px;
+    gap: 10px;
+    width: 100%;
+    height: 74px;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+}
+
+
+.c-t-prio-divs-head {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.c-t-prio-divs {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 10px;
+    gap: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.clicked-task-window-edit-input {
+    padding: 11px 21px;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.c-t-ok-edit-button {
+    width: 95px;
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2A3647;
+    border-radius: 10px;
+    padding: 18px 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+    position: fixed;
+    bottom: 4%;
+    right: 5%;
+}
+
+.c-t-ok-edit-button img {
+    width: 20px;
+    padding-left: 8px;
+}
+
+
+.c-t-ok-edit-button:hover {
+    cursor: pointer;
+}
+
+/* Edit window end */
+a::-webkit-scrollbar {
+    border-radius: 20px;
+}
+
+.c-t-first-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.c-t-exit-arrow-edit {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: -32px;
+    margin-top: 7px;
+}
+
+.c-t-exit-arrow-edit:hover {
+    cursor: pointer;
+}
+
+.c-t-exit-arrow:hover {
+    cursor: pointer;
+}
+
+
+.c-t-category {
+    font-size: 22px;
+    width: max-content;
+    background-color: deeppink;
+    padding: 6px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-radius: 14px;
+    color: white;
+}
+
+.c-t-title {
+    font-size: 41px;
+    color: #253141;
+    margin-top: 20px;
+}
+
+.c-t-description {
+    color: #253141;
+    font-weight: 600;
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 150%;
+}
+
+
+.c-t-subtask-section {
+    display: flex;
+}
+
+.c-t-infos {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.c-t-checkbox {
+    display: flex;
+    margin-left: 5px;
+    gap: 10px;
+}
+
+
+.c-t-checkbox input {
+    display: flex;
+    margin-left: 5px;
+    gap: 10px;
+}
+
+.c-t-subtasks {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.c-t-space {
+    width: 50%;
+}
+
+
+.priority-box {
+    padding: 4px 18px;
+    margin-left: 18px;
+    gap: 10px;
+    background-color: FF3d00;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.c-t-priority-icon {
+    object-fit: contain;
+    width: 16px;
+}
+
+.c-t-assignedTo {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-t-profilimages {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    border-radius: 559px;
+    background: #6d5b7e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 400;
+}
+
+.c-t-contact {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    font-weight: 500;
+}
+
+.c-t-ok-edit-button-div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.c-t-remove-edit-button-div {
+    display: flex;
+    justify-content: flex-start;
+}
+.c-t-remove-edit-button-div span{
+    font-size: 18px;
+}
+
+
+.c-t-edit-button {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: fixed;
+    bottom: 4%;
+    right: 5%;
+}
+
+
+.c-t-remove-edit-button {
+    width: 150px;
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2A3647;
+    border-radius: 10px;
+    padding: 0px 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 120%;
+    position: fixed;
+    left: 11%;
+    bottom: 4%;
+    gap: 10px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+
+
+.c-t-remove-edit-button img {
+    width: 28px;
+}
+
+.c-t-remove-edit-button:hover {
+    cursor: pointer;
+}
+
+.c-t-edit-button:hover {
+    cursor: pointer;
+}
+
+
+/* ADD TASK WINDOW */
+.margin-top-0 {
+    margin-top: 0px !important;
+}
+
+.close-add-task {
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    cursor: pointer;
+}
+
+
+.clicked-addtask-bg {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.clicked-addtask-window {
+    overflow-y: scroll;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    transform: translateX(0px);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    left: 10%;
+    right: 10%;
+    top: 1%;
+    bottom: 1%;
+    border-radius: 20px;
+    background-color: white;
+    z-index: 1000;
+    display: none;
+    animation: fadeInAddTask 1s ease-in-out;
+
+}
+
+
+
+
+
+.d-none {
+    display: none !important;
+}
+
+
+@keyframes fadeInAddTask {
+    from {
+        transform: translateX(940px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeOutTask {
+    from {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(940px);
+        opacity: 0;
+    }
+}
+
+
+.add-task-whole-page {
+    display: flex;
+}
+
+.add-task-left-side {
+    margin-left: 40px !important;
+}
+
+.overlay-add-task-left-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.enter-title, .enter-description, .input-date {
+    box-sizing: unset;
+}
+
+.h1-add-task {
+    font-weight: 700;
+    font-size: 61px;
+    margin-top: 0px !important;
+    margin-bottom: 41px;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+.margin-top-115-responsive-34 {
+    margin-top: 115px !important;
+}
+
+.width-422 {
+    width: 422px !important;
+}
+
+
+@media (max-width:1400px) {
+
+    .kanban-management-headlines {
+        width: 100%;
+    }
+
+    .second-row {
+        flex-direction: column;
+    }
+
+    :root {
+        --width-task-size: 100%;
+    }
+
+    .current-status {
+        width: 100%;
+        min-height: 10;
+    }
+
+    .find-task-div {
+        justify-content: space-between;
+        margin-left: 5%;
+        height: 34px;
+        width: 300px;
+    }
+
+    .clicked-task-window {
+        transform: translate(-28%, -50%);
+    }
+}
+
+
+
+@media (max-width:770px) {
+
+    .clicked-task-window {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width:570px) {
+
+    header {
+        z-index: 500 !important;
+    }
+
+
+    .clicked-task-window {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0px;
+        margin: 30px;
+        padding: 30px;
+        padding-top: 90px;
+        top: 59%;
+        background-color: #F6F7F8;
+        gap: 10px;
+    }
+
+    .clicked-task-window-edit-input {
+        width: 90%;
+    }
+
+    .clicked-task-window textarea {
+        width: 90%;
+    }
+
+    .c-t-prio-divs-head {
+        width: 90%;
+    }
+
+
+    .clicked-task-bg {
+        position: fixed;
+        display: none;
+    }
+
+    .c-t-first-row {
+        width: 80%;
+    }
+
+
+    .c-t-remove-edit-button {
+        position: fixed;
+        left: 6%;
+        bottom: 20%;
+    }
+}
+
+
